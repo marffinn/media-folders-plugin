@@ -1,0 +1,131 @@
+#mf-media-folder-dock {
+    box-sizing: border-box;
+    width: 230px;
+    margin: 0 14px 18px 0;
+    padding: 14px;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    background: #ffffff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    float: left;
+}
+
+.mf-media-folder-dock-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 5px;
+    color: #1d2327;
+}
+
+.mf-media-folder-dock-heading a {
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.mf-media-folder-help {
+    margin: 0 0 12px;
+    color: #646970;
+    font-size: 12px;
+}
+
+.mf-media-folder-list {
+    display: grid;
+    gap: 6px;
+}
+
+.mf-media-folder-drop-target {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    min-height: 34px;
+    padding: 6px 8px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    color: #1d2327;
+    cursor: copy;
+    user-select: none;
+}
+
+.mf-media-folder-drop-target:hover,
+.mf-media-folder-drop-target:focus {
+    border-color: #8c8f94;
+    background: #f0f0f1;
+    outline: none;
+}
+
+.mf-media-folder-drop-target.is-drag-over {
+    border-color: #2271b1;
+    background: #e7f3ff;
+    box-shadow: inset 0 0 0 1px #2271b1;
+}
+
+.mf-media-folder-drop-target.is-assigning {
+    opacity: 0.55;
+    cursor: wait;
+}
+
+.mf-folder-icon {
+    color: #2271b1;
+    font-size: 15px;
+}
+
+.mf-folder-name {
+    overflow: hidden;
+    flex: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.mf-folder-count {
+    color: #646970;
+    font-size: 11px;
+}
+
+.mf-media-folder-empty {
+    margin: 0;
+    color: #646970;
+    font-size: 12px;
+}
+
+.attachments .attachment.is-being-dragged {
+    opacity: 0.45;
+    cursor: grabbing;
+}
+
+.mf-drag-ghost {
+    position: fixed;
+    z-index: 100001;
+    pointer-events: none;
+    opacity: 0.82;
+    transform: rotate(2deg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.24);
+}
+
+.mf-drag-notice {
+    position: fixed;
+    z-index: 100000;
+    top: 42px;
+    right: 24px;
+    max-width: 360px;
+    padding: 12px 16px;
+    border-left: 4px solid #2271b1;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+    transition: opacity 0.25s ease;
+}
+
+.mf-drag-notice.is-error {
+    border-left-color: #d63638;
+}
+
+.mf-drag-notice.is-hidden {
+    opacity: 0;
+}
+
+.attachments-browser::after {
+    display: block;
+    clear: both;
+    content: '';
+}
